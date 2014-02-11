@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+mkdir -p /tmp/apt-install-version-relations
+cd /tmp/apt-install-version-relations
+echo "Package: meta-apt-install-version-relations
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: $1" > control
+
+equivs-build control
+
+gdebi --non-interactive /tmp/apt-install-version-relations/meta-apt-install-version-relations_1.0_all.deb

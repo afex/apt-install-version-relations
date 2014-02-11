@@ -1,0 +1,8 @@
+Package: apt-install-version-relations
+Version: 0.1
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Keith Thornhill <keith.thornhill@gmail.com>
+Description: Convenience wrapper to install a list packages with relations of version dependencies.
+Depends: equivs, gdebi-core
